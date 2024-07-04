@@ -6,6 +6,9 @@ Teammates:-) 1)Tushar kanda (https://github.com/Tusharkanda)
             mail :- tusharkanda.221ai042@nitk.edu.in
             2) Priyanshu maniyar(https://github.com/priyanshu-Maniyar)
             mail:- priyanshumaniyar.221ai023@nitk.edu.in
+            3) Sachin Choudhary(https://github.com/sachin9536)
+            mail-sachinchoudhary.221ai034@nitk.edu.in
+            
 
 The project is a simulation of the online banking system. The server handles each client request with help of multi-threading concept. Clients' information along with account details and balance amount is stored in the database files (.txt files). Semaphores are used to synchronize user operations. There are three types of users - Administrators, Normal users, and Joint account users. File locking concept is also used to synchronize file manipulations for joint account user operations.
 

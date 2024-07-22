@@ -7,8 +7,9 @@
 #define JOINT_USER 1
 #define ADMIN_USER 2
 
-//extern char** offsetTable;
-char** userIdTable[3]; // 0-> normal user, 1->joint user, 2->admin
+#include <sqlite3.h>
+
+extern sqlite3 *db; // Database connection
 
 struct Person{
   char username[MAX_CHAR_LEN];
@@ -34,7 +35,6 @@ union semun{
   struct semid_ds *buf;
   unsigned short int *array;
 };
-
 
 void* server_to_client(void* arg);
 int getIdNorm(char* username);
@@ -66,9 +66,7 @@ int passwordChangeNorm(int id, char* password);
 int passwordChangeJoint(int id, char* password, char* cur_username);
 int depositAmtNorm(int id, long int amt);
 int depositAmtJoint(int id, long int amt);
-//int depositAmtAdmin(int id, long int amt); ignored. Admin is just an operator and not customer
 int withdrawAmtNorm(int id, long int amt);
 int withdrawAmtJoint(int id, long int amt);
-//int withdrawAmtAdmin(int id, long int amt); ignored. Admin is just an operator and not customer
 
 #endif
